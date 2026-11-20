@@ -15,6 +15,12 @@
   .body { padding: 8px 20px 20px; }
   img { image-rendering: pixelated; width: 128px; height: 128px; }
   a { color: var(--ink); }
+  h2 { font-size: 16px; margin: 24px 0 8px; text-transform: uppercase; letter-spacing: 1px; }
+  .buttons { display: flex; flex-wrap: wrap; gap: 12px; margin: 12px 0; }
+  .button { display: inline-block; border: 2px solid var(--ink); border-radius: 8px; padding: 6px 14px;
+            text-decoration: none; font-weight: bold; box-shadow: 3px 3px 0 var(--ink); }
+  .button:active { box-shadow: none; transform: translate(3px, 3px); }
+  small { display: block; }
 </style>
 </head>
 <body>
@@ -25,9 +31,22 @@
 <p><img src="icon.png" alt="Значок Arafura: пластинка у кромки моря"></p>
 <p>Плеер для своей музыки в стиле Макинтоша 1987 года — для Android, macOS и Windows.
 Слушает альбомы целиком, играет почти любые форматы, ничего не собирает и не отправляет.</p>
+<h2>Скачать — версия 0.1.0</h2>
+<div class="buttons">
+  <a class="button" href="https://github.com/EgorPlays1/arafura-site/releases/download/v0.1.0/Arafura.apk">Android</a>
+  <a class="button" href="https://github.com/EgorPlays1/arafura-site/releases/download/v0.1.0/Arafura-mac.zip">macOS</a>
+  <a class="button" href="https://github.com/EgorPlays1/arafura-site/releases/download/v0.1.0/Arafura-windows.zip">Windows</a>
+</div>
+<p><b>Android</b> 8.0 и новее, arm64. Разрешите установку из браузера или файлового менеджера.
+При первом запуске Arafura попросит доступ ко всем файлам — без него не видны .cue и обложки.</p>
+<p><b>macOS</b> 11 и новее, Apple Silicon. Распакуйте и перетащите Arafura в «Программы».
+В первый раз откройте правым щелчком → «Открыть»: Arafura пока не подписана у Apple.</p>
+<p><b>Windows</b> 10 и 11, 64-бит. Распакуйте куда угодно и запустите Arafura.exe.
+SmartScreen может предупредить о неизвестном издателе: «Подробнее» → «Выполнить в любом случае».</p>
 <p>Скоро в RuStore.</p>
 <p><a href="privacy.html">Политика конфиденциальности</a></p>
-<p>© 2026 Егор Ткаченко</p>
+<p>© 2026 Егор Ткаченко. Сделано на <a href="https://slint.dev">Slint</a>;
+редкие форматы играет <a href="https://ffmpeg.org">FFmpeg</a> (LGPL).</p>
 </div>
 </div>
 </main>
